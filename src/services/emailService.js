@@ -10,8 +10,7 @@ const sendWelcomeEmail = (email, name) => {
         from: 'franco.bianco93@hotmail.com',
         subject: `Hi ${name}, welcome to Task Manager APP`,
         text: `We are happy you join us!`
-    }).then((result) => {
-    }).catch((e) => console.log(e.response.body));
+    });
 }
 
 const sendCancelationEmail = (email, name) => {
@@ -20,8 +19,7 @@ const sendCancelationEmail = (email, name) => {
         from: 'franco.bianco93@hotmail.com',
         subject: `Hi ${name}, we are sad 'cause you leave us!`,
         text: `We wish you the best, regards!`
-    }).then((result) => {
-    }).catch((e) => console.log(e.response.body));
+    });
 }
 
 module.exports = {

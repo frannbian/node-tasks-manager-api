@@ -130,19 +130,19 @@ router.patch('/users/:id', auth, async (req, res) => {
     const isValidOperation = fieldsToUpdate.every((field) => fillables.includes(field));
 
     if (!isValidOperation) {
-        res.status(400).send({ 'error': 'Invalid fields sent.'} )
+        return res.status(400).send({ 'error': 'Invalid fields sent.'})
     }
 
     try {
         const user = await User.findById(_id);
 
-        fieldsToUpdate.forEach((field) => user[field] = req.body[field]);
-
-        await user.save();
-
         if (!user) {
             res.status(404).send();
         }
+
+        fieldsToUpdate.forEach((field) => user[field] = req.body[field]);
+
+        await user.save();
 
         res.send(user);
     } catch (e) {
