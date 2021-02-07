@@ -1,6 +1,6 @@
 {
-  "name": "task-manager-app",
-  "version": "0.0.2",
+  "name": "tasks-manager-app",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
