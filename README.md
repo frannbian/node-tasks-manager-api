@@ -4,6 +4,8 @@ A simple CRUD RESTFul API developed with NodeJS, MongoDB, Mongoose, ExpressJS & 
 
 Features: Auth, User CRUD, Task CRUD, Email sender, File manager (Users Avatar)
 
+Tests with JestJS (Only users CRUD & files upload)
+
 Try it: https://node-tasks-manager-api.herokuapp.com/
 
 All the implementations: 
