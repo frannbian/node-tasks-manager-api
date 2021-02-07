@@ -74,7 +74,7 @@ router.patch('/tasks/:id', auth, async (req, res) => {
     const isValidOperation = fieldsToUpdate.every((field) => fillables.includes(field));
 
     if (!isValidOperation) {
-        res.status(400).send({ 'error': 'Invalid fields sent.'} )
+        return res.status(400).send({ 'error': 'Invalid fields sent.'} )
     }
 
     try {
